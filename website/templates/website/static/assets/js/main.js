@@ -1,0 +1,1 @@
+document.getElementsByClassName("landing").style.backgroundImage.src = "IMG-20220504-WA0005.jpg"
