@@ -57,9 +57,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill,45%);
     justify-content: center;
-    border: 2px solid red;
+    border: 2px solid #333;
     grid-gap: 10px;
 
+}
+
+.containery h1{
+    margin-bottom: 10px;
+    line-height: 10px;
+    line-
 }
 
 /* this part is for the footer */
@@ -131,22 +137,28 @@ footer .footerItem .contact a i{
 .legal{
     background-color: rgb(15, 14, 14);
 }
+.carousel-item img{
+    padding-left:60px;
+    max-width: 150vh;
+    max-height: auto;
+    margin-left: 110px;
+}
 
-@media (min-width:1300px){
+ @media (min-width:1000px){
     .carousel-item img{
-        padding-left:500px;
+        padding-left:60px;
         max-width: 150vh;
         max-height: auto;
         margin-left: 110px;
     }
 
-}
+} 
 @media (max-width:400px){
     .footerContainer{
         display:initial ;
         flex-wrap: wrap;
     }
     .footerContainer .footerItem{
-        width: 90%;
+        width: 100%;
     }
 }
