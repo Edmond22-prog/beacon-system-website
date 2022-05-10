@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 *{
     box-sizing: border-box;
     font: 400;
@@ -6,49 +8,466 @@
     font-size: 20px;
     overflow-wrap: break-word;
 }
-body{
-    color: rebeccapurple;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    body {
+        background: #212121;
+        font-size:22px;
+        line-height: 32px;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        word-wrap:break-word !important;
+        font-family: 'Open Sans', sans-serif;
+        }
+    
+    h1 {
+        font-size: 60px;
+        text-align: center;
+        color: #FFF;
+    }	
+    
+    h3 {
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        color: #FFF;
+    }
+    
+    h3 a {
+        color: #FFF;
+    }
+    
+    a {
+        color: #FFF;
+    }
+    
+    h1 {
+        margin-top: 100px;
+        text-align:center;
+        font-size:60px;
+        line-height: 70px;
+        font-family: 'Bree Serif', 'serif';
+        }
+    
+    #container {
+        margin: 0 auto;
+        max-width: 890px;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    .toggle,
+    [id^=drop] {
+        display: none;
+    }
+    
+    /* Giving a background-color to the nav container. */
+    nav { 
+        margin:0;
+        padding: 0;
+        background-color: #FF6600;
+    }
+    
+    #logo {
+        display: block;
+        padding: 0 30px;
+        float: left;
+        font-size:20px;
+        line-height: 60px;
+    }
+    
+    /* Since we'll have the "ul li" "float:left"
+     * we need to add a clear after the container. */
+    
+    nav:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+    
+    /* Removing padding, margin and "list-style" from the "ul",
+     * and adding "position:reltive" */
+    nav ul {
+        float: right;
+        padding:0;
+        margin:0;
+        list-style: none;
+        position: relative;
+        }
+        
+    /* Positioning the navigation items inline */
+    nav ul li {
+        margin: 0px;
+        display:inline-block;
+        
+        background-color: #FF6600;
+        }
+    
+    nav ul li .last{
+        margin: 0px;
+        display:inline-block;
+        /* float: right; */
+        clear: both;
+        margin-left: 400px;
+        background-color: #FF6600;
+        }
+    
+    /* Styling the links */
+    nav a {
+        display:block;
+        padding:14px 20px;	
+        color:#FFF;
+        font-size:17px;
+        text-decoration:none;
+    }
+    
+    
+    nav ul li ul li:hover { background: #000000; }
+    
+    /* Background color change on Hover */
+    nav a:hover { 
+        background-color: #000000; 
+    }
+    
+    /* Hide Dropdowns by Default
+     * and giving it a position of absolute */
+    nav ul ul {
+        display: none;
+        position: absolute; 
+        /* has to be the same number as the "line-height" of "nav a" */
+        top: 60px; 
+    }
+        
+    /* Display Dropdowns on Hover */
+    nav ul li:hover > ul {
+        display:inherit;
+    }
+        
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        width:170px;
+        float:none;
+        display:list-item;
+        position: relative;
+    }
+    
+    /* Second, Third and more Tiers	
+     * We move the 2nd and 3rd etc tier dropdowns to the left
+     * by the amount of the width of the first tier.
+    */
+    nav ul ul ul li {
+        position: relative;
+        top:-60px;
+        /* has to be the same number as the "width" of "nav ul ul li" */ 
+        left:170px; 
+    }
+    
+        
+    /* Change ' +' in order to change the Dropdown symbol */
+    li > a:after { content:  ' +'; }
+    li > a:only-child:after { content: ''; }
+    
+    
+    /* Media Queries
+    --------------------------------------------- */
+    
+    @media all and (max-width : 768px) {
+    
+        #logo {
+            display: block;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
+    
+        nav {
+            margin: 0;
+        }
+    
+        /* Hide the navigation menu by default */
+        /* Also hide the  */
+        .toggle + a,
+        .menu {
+            display: none;
+        }
+    
+        /* Stylinf the toggle lable */
+        .toggle {
+            display: block;
+            background-color: #FF6600;
+            padding:14px 20px;	
+            color:#FFF;
+            font-size:17px;
+            text-decoration:none;
+            border:none;
+        }
+    
+        .toggle:hover {
+            background-color: #000000;
+        }
+    
+        /* Display Dropdown when clicked on Parent Lable */
+        [id^=drop]:checked + ul {
+            display: block;
+        }
+    
+        /* Change menu item's width to 100% */
+        nav ul li {
+            display: block;
+            width: 100%;
+            }
+    
+        nav ul ul .toggle,
+        nav ul ul a {
+            padding: 0 40px;
+        }
+    
+        nav ul ul ul a {
+            padding: 0 80px;
+        }
+    
+        nav a:hover,
+         nav ul ul ul a {
+            background-color: #000000;
+        }
+      
+        nav ul li ul li .toggle,
+        nav ul ul a,
+      nav ul ul ul a{
+            padding:14px 20px;	
+            color:#FFF;
+            font-size:17px; 
+        }
+      
+      
+        nav ul li ul li .toggle,
+        nav ul ul a {
+            background-color: #212121; 
+        }
+    
+        /* Hide Dropdowns by Default */
+        nav ul ul {
+            float: none;
+            position:static;
+            color: #ffffff;
+            /* has to be the same number as the "line-height" of "nav a" */
+        }
+            
+        /* Hide menus on hover */
+        nav ul ul li:hover > ul,
+        nav ul li:hover > ul {
+            display: none;
+        }
+            
+        /* Fisrt Tier Dropdown */
+        nav ul ul li {
+            display: block;
+            width: 100%;
+        }
+    
+        nav ul ul ul li {
+            position: static;
+            /* has to be the same number as the "width" of "nav ul ul li" */ 
+    
+        }
+    
+        nav ul li .last{
+        margin: 0px;
+        display:initial;
+    
+        clear: both;
+        margin-left: auto;
+        background-color: #FF6600;
+        }
+    }
+    
+    *{
+    box-sizing: border-box;
+    font: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-size: 20px;
+    overflow-wrap: break-word;
 }
-header a{
-    text-decoration: none;
-    cursor: pointer;
+
+/* the landing */
+.landing{
+    background-image: url("./../images/carrots.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-header a:hover{
-    background-color: black;
+.landing .title{
+    color: aliceblue;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 50px;
+    margin: 20px;
+    padding: 80px;
+    padding-bottom: none;
+}
+.landingSubtitle{
+    color: aliceblue;
+    padding-top: none;
+    margin-top: 15px;
+    font-weight: 400;
+}
+.devi{
+    position: fixed;
+    top: 50%;
+    right: 05%;
+    min-height: 40px;
+    justify-content: center;
+    color: aliceblue;
+    font-size: medium;
+    font-size: 15px;
+    margin: 2px;
+    padding-top: 10px;
+    border: 0px solid ;
+    border-radius: 05px;
+    background-color:  #FF6600;
+    opacity: 0.75;
+}
+/* the entreprise description */
+
+.container,.entreprise{
+    max-width: 100%;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,45%);
+    justify-content: center;
+    border: 2px solid black;
+    grid-gap: 10px;
+
+}
+
+/* this part is for the footer */
+
+footer{
+    background-image: url("./../images/carrots.jpg");
+    margin: 12px;
+    
+}
+.footerContainer{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    justify-content: center;
+    color: white;
+    background-color: rgba(19, 13, 13, 0.2);
+    grid-gap: 10px;
+}
+footer .footerItem{
+    /* max-width: 23%; */
     color: white;
 }
-.navBar{
+footer .aPropos{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    color: aliceblue;
 }
-.navBar .nav ul{
+footer .footerItem h3{
+    color: aliceblue;
+}
+footer .footerItem .contact a i{
+    opacity:0.9;
+    font-size: 015px;
+    color: aliceblue;
+}
+.footerIte,.services ul{
     list-style: none;
-    display: flex;
+}
+.footerIte,.services ul li a{
+    color: aliceblue;
     text-decoration: none;
-    justify-content: center;
+    font-size: 18px;
+    margin: 2px;
+    padding: 1px
 }
-.navBar .nav ul li a{
-    border-radius: 10px;
-    padding: 3px;
-    margin: 20px;
+.footerItem ,.plan ul{
+    color: aliceblue;
+    list-style: none;
 }
-.number{
-    margin-top: 20px;
+.footerItem ,.plan ul li a{
+    color: aliceblue;
+    text-decoration: none;
 }
-.number a i{
-    size: 400%;
+.footerItem ,.plan ul li {
+    color: aliceblue;
+    margin: 2px;
+    padding: 1px;
+    text-decoration: none;
 }
-.navBar .nav ul li ul{
-    display: none;
+
+/* info legale */
+
+.infolegal span{
+    color: aliceblue;
+    font-size: large;
+    min-width: 100%;
 }
-.navBar .nav ul li ul li{
-    margin: 10px;
-    font: 400;
+.legal{
+    background-color: rgb(15, 14, 14);
 }
-header .navBar ul li:hover > ul{
-    display: initial;
-    border-top: none;
+
+
+@media (max-width:400px){
+    .footerContainer{
+        display: grid;
+        flex-wrap: wrap;
+    }
+    .footerContainer .footerItem{
+        width: 90%;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* the landing */
 .landing{
     background-image: url("./../images/carrots.jpg");
@@ -174,7 +593,7 @@ footer .footerItem .contact a i{
 
 @media (max-width:400px){
     .footerContainer{
-        display: ;
+        display:initial ;
         flex-wrap: wrap;
     }
     .footerContainer .footerItem{
