@@ -65,7 +65,7 @@
 .containery h1{
     margin-bottom: 10px;
     line-height: 10px;
-    line-
+    /* line- */
 }
 
 /* this part is for the footer */
@@ -73,8 +73,74 @@
 footer{
     background-image: url("./../images/carrots.jpg");
     margin: 12px;
-    
 }
+
+
+#moreStrategieplus{
+    display: none;
+    /* color: brown; */
+}
+.tecknologie{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    margin: 5px;
+}
+.testifie{
+    flex-wrap: wrap;
+    flex-flow: row;
+    -ms-flex-align: center;
+    display: flex;
+    justify-content: first baseline;
+    margin: 2px;
+}
+*{
+    box-sizing: border-box;
+}
+.testifie .testimonial{
+    margin: 5px;
+}
+.comtainer,.titre{
+    font-size: xx-large;
+    font-weight: 700;
+    text-align: center;
+}
+.comtainer,.partnaireDescription{
+    font-size: medium;
+    font-weight: 300;
+}
+.deviGratuit{
+    color: orangered;
+    color: oran;
+    border: 2px solid orangered;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 5px;
+    padding: 5px;
+}
+.presentationServices{
+    width:  100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,500px);
+    grid-gap: 15px;
+}
+.presentationServices .leslide{
+    margin: 5px;
+    padding: 5px;
+}
+.solutionDetaille .redText{
+    color: red;
+    /* font-weight: 400; */
+}
+@media (max-width:500px) {
+    .comtainer,.titre{
+        font-size: large;
+        font-weight: 700;
+    text-align: center;
+} 
+}
+
+
 .footerContainer{
     width: 100%;
     height: auto;
