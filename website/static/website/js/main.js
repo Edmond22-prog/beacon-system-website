@@ -34,7 +34,7 @@ if (image =="slide3.png") {
 
 function slideFunction1(curent)
 {
-    document.getElementById("slide1").src ="slide1.png"
+    document.getElementById("slide1").src ="{% static 'website/images/pc.jpg'%}"
     setTimeout(() => {
         slideFunction2()
     }, 3000);
@@ -44,7 +44,7 @@ function slideFunction1(curent)
 
 function slideFunction2(curent)
 {
-     document.getElementById("slide1").src = "slide2.png"
+     document.getElementById("slide1").src = "{% static 'website/images/gratteCiel.jpg'%}"
 
     setTimeout(() => {
         slideFunction3()
@@ -55,7 +55,7 @@ function slideFunction2(curent)
 
 function slideFunction3(curent)
 {
-    document.getElementById("slide1").src = "slide3.png"
+    document.getElementById("slide1").src = "{% static 'website/images/computer.jpg'%}"
     setTimeout(() => {
         slideFunction1()
     }, 3000);
@@ -81,3 +81,5 @@ slideFunction1(1)
       document.getElementById("textt").slideUp();
     }
   };
+
+  alert("ici javascript")
