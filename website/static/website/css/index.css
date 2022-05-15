@@ -81,23 +81,34 @@ footer{
     /* color: brown; */
 }
 .tecknologie{
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: row;
-    margin: 5px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,23%);
+    justify-content: center;
+    grid-gap: 5px;
+    margin: 2px;
 }
 .testifie{
-    flex-wrap: wrap;
-    flex-flow: row;
-    -ms-flex-align: center;
-    display: flex;
-    justify-content: first baseline;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,23%);
+    justify-content: center;
+    grid-gap: 5px;
     margin: 2px;
+}
+.tecknologie{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,23%);
+    justify-content: center;
+    grid-gap: 5px;
+    margin: 2px;    
 }
 *{
     box-sizing: border-box;
 }
 .testifie .testimonial{
+    width: 100%;
     margin: 5px;
 }
 .comtainer,.titre{
