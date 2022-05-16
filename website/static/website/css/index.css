@@ -104,6 +104,9 @@ footer{
     grid-gap: 5px;
     margin: 2px;    
 }
+.carousel-image {
+    max-height:500px;
+        }
 *{
     box-sizing: border-box;
 }
