@@ -32,35 +32,35 @@ if (image =="slide3.png") {
 }
 }
 
-function slideFunction1(curent)
-{
-    document.getElementById("slide1").src ="{% static 'website/images/pc.jpg'%}"
-    setTimeout(() => {
-        slideFunction2()
-    }, 3000);
-}
+// function slideFunction1(curent)
+// {
+//     document.getElementById("slide1").src ="{% static 'website/images/pc.jpg'%}"
+//     setTimeout(() => {
+//         slideFunction2()
+//     }, 3000);
+// }
 
 
 
-function slideFunction2(curent)
-{
-     document.getElementById("slide1").src = "{% static 'website/images/gratteCiel.jpg'%}"
+// function slideFunction2(curent)
+// {
+//      document.getElementById("slide1").src = "{% static 'website/images/gratteCiel.jpg'%}"
 
-    setTimeout(() => {
-        slideFunction3()
-    }, 3000);
-}
+//     setTimeout(() => {
+//         slideFunction3()
+//     }, 3000);
+// }
 
 
 
-function slideFunction3(curent)
-{
-    document.getElementById("slide1").src = "{% static 'website/images/computer.jpg'%}"
-    setTimeout(() => {
-        slideFunction1()
-    }, 3000);
-}
-slideFunction1(1)
+// function slideFunction3(curent)
+// {
+//     document.getElementById("slide1").src = "{% static 'website/images/computer.jpg'%}"
+//     setTimeout(() => {
+//         slideFunction1()
+//     }, 3000);
+// }
+// slideFunction1(1)
 
 // script for the red more buton
 
