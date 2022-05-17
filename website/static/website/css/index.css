@@ -104,9 +104,13 @@ footer{
     grid-gap: 5px;
     margin: 2px;    
 }
-.carousel-image {
-    max-height:500px;
-        }
+/* .carousel-image {
+    max-height:600px;
+} */
+.carousel-imtem img{
+    max-height: 600px;
+    min-width:1200px;
+}
 *{
     box-sizing: border-box;
 }
@@ -216,9 +220,9 @@ footer .footerItem .contact a i{
 .legal{
     background-color: rgb(15, 14, 14);
 }
-.carousel-item img{
+/* .carousel-item img{
     margin: 20px;
-}
+} */
 
  /* @media (min-width:1000px){
     .carousel-item img{
