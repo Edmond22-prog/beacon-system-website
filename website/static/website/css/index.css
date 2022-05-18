@@ -81,20 +81,27 @@
     margin: 2px;
 }
 .testifie{
-    width: 90%;
+    width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,23%);
+    grid-template-columns: repeat(auto-fill,300px);
     justify-content: center;
-    grid-gap: 5px;
+    grid-gap: 10px;
     margin: 2px;
 }
 .tecknologie{
-    width: 90%;
+    width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,23%);
+    grid-template-columns: repeat(auto-fill,300px);
     justify-content: center;
-    grid-gap: 5px;
+    grid-gap: 10px;
     margin: 2px;    
+}
+.partenaires{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    justify-content: center;
+    grid-gap: 10px;   
 }
 /* .carousel-image {
     max-height:600px;
@@ -148,24 +155,24 @@
 
 
 .footerContainer{
-    width: auto;
-    height: 100%;
+    width: 100%;
     /* display: grid; */
+    display: grid;
     grid-template-columns: repeat(auto-fill,300px);
-    justify-content: center;
+    grid-gap: 5px;
+    /* justify-content: space-evenly; */
     color: white;
-
     background-color: #000;
-
-
-    background-color: rgba(19, 13, 13, 0.2);
+    background-color:#000;
     /* grid-gap: 10px; */
 }
 footer .footerItem{
     /* max-width: 23%; */
     color: white;
+    margin: 5px;
 }
 footer .aPropos{
+    margin-left: 20px;
     display: flex;
     justify-content: flex-start;
     color: aliceblue;
@@ -212,13 +219,4 @@ footer .footerItem .contact a i{
 }
 .legal{
     background-color: #000;
-}
-@media (max-width:400px){
-    .footerContainer{
-        display:initial ;
-        flex-wrap: wrap;
-    }
-    .footerContainer .footerItem{
-        width: 100%;
-    }
 }

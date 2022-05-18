@@ -198,6 +198,46 @@
             </div>
         </div>
     </footer>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
+
+
+
+<div class="owl-carousel owl-theme">
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4><img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"> </h4></div>
+    <div class="item"><h4>1<img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"></h4></div>
+    <div class="item"><h4>1<img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"></h4></div>
+    <div class="item"><h4>1<img src="{% static 'website/images/black-square-adv.png' %}" alt="Image du logo de beacom" style="width:70px; height: 60px;"></h4></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        ('.owl-carousel').owlCarousel();
+    });
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+</script>
     <script src="{% static 'website/js/main.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
