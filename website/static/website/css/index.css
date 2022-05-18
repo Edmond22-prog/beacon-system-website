@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 *{
     box-sizing: border-box;
     font: 400;
@@ -70,12 +68,6 @@
 
 /* this part is for the footer */
 
-footer{
-    /* background-image: url("./../images/carrots.jpg");    Fcar */
-    margin: 12px;
-}
-
-
 #moreStrategieplus{
     display: none;
     /* color: brown; */
@@ -110,9 +102,6 @@ footer{
 .carousel-imtem img{
     max-height: 600px;
     min-width:1200px;
-}
-*{
-    box-sizing: border-box;
 }
 .testifie .testimonial{
     width: 100%;
@@ -165,8 +154,8 @@ footer{
     grid-template-columns: repeat(auto-fill,300px);
     justify-content: center;
     color: white;
-    background-color: rgba(19, 13, 13, 0.2);
-    grid-gap: 10px;
+    background-color: #000;
+
 }
 footer .footerItem{
     /* max-width: 23%; */
@@ -218,21 +207,8 @@ footer .footerItem .contact a i{
     min-width: 100%;
 }
 .legal{
-    background-color: rgb(15, 14, 14);
+    background-color: #000;
 }
-/* .carousel-item img{
-    margin: 20px;
-} */
-
- /* @media (min-width:1000px){
-    .carousel-item img{
-        padding-left:60px;
-        max-width: 150vh;
-        max-height: auto;
-        margin-left: 110px;
-        
-    } 
-} */
 @media (max-width:400px){
     .footerContainer{
         display:initial ;
