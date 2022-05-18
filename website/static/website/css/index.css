@@ -148,14 +148,18 @@
 
 
 .footerContainer{
-    width: 100%;
-    height: auto;
-    display: grid;
+    width: auto;
+    height: 100%;
+    /* display: grid; */
     grid-template-columns: repeat(auto-fill,300px);
     justify-content: center;
     color: white;
+
     background-color: #000;
 
+
+    background-color: rgba(19, 13, 13, 0.2);
+    /* grid-gap: 10px; */
 }
 footer .footerItem{
     /* max-width: 23%; */
