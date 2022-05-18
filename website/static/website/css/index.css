@@ -60,18 +60,12 @@
 
 }
 
-.containery h1{
-    margin-bottom: 10px;
-    line-height: 10px;
-    /* line- */
-}
 
+.strategigie{
+    font-size: 18PX;
+}
 /* this part is for the footer */
 
-#moreStrategieplus{
-    display: none;
-    /* color: brown; */
-}
 .tecknologie{
     width: 90%;
     display: grid;
