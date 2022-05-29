@@ -156,8 +156,7 @@
     grid-gap: 5px;
     /* justify-content: space-evenly; */
     color: white;
-    background-color: #000;
-    background-color:#000;
+    background-color: #FF6600;
     /* grid-gap: 10px; */
 }
 footer .footerItem{
@@ -166,7 +165,7 @@ footer .footerItem{
     margin: 5px;
 }
 footer .aPropos{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     display: flex;
     justify-content: flex-start;
     color: aliceblue;
@@ -179,10 +178,10 @@ footer .footerItem .contact a i{
     font-size: 015px;
     color: aliceblue;
 }
-.footerIte,.services ul{
+.footerItem,.services ul{
     list-style: none;
 }
-.footerIte,.services ul li a{
+.footerItem,.services ul li a{
     color: aliceblue;
     text-decoration: none;
     font-size: 18px;
