@@ -72,21 +72,22 @@
   <header id="header" class="d-flex align-items-center shadow-lg">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="{% url 'home' %}">Beacon System<span>s.</span></a></h1>
+      <h1 class="logo"><a href="">Beacon System<span>s.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      {% comment %} <a href="{% url 'home' %}" class="logo"><img src=" {% static 'website/img/logo.png' %} " alt="logo beacon systems"></a> {% endcomment %}
+      {% comment %} <a href="{% url 'home' %}" class="logo"><img src=" {% static 'updated/img/logo.png' %} " alt="logo beacon systems"></a> {% endcomment %}
 
       <nav id="navbar" class="navbar">
         <ul>
             <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% url 'home' %}">Accueil</a></li>
-            <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% url 'contact' %}">Contacts</a></li>
-            <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><span href=""><span>Services</span> <i class="bi bi-chevron-down"></i></span>
               <ul>
                 <li><a href="#">Hebergement</a></li>
                 <li><a href="#">Developpement</a></li>
+                <li><a href="#">Marketing Digital</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#">Marketing</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% url 'contact' %}">Contacts</a></li>
+            <li><a class="nav-link scrollto" href="#">Produits</a></li>
             <!-- Additional button on the navbar -->
             {% comment %} <li><a class="button" href="#" style="margin: 10px;">Obtenir un devis<i class="bi bi-journal-check"></i></a></li> {% endcomment %}
             <div class="social-links d-flex text-center w-50">
@@ -132,10 +133,10 @@
             <div class="col-lg-3 col-md-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="{% if nbar == 'home' %}#{% else %}{% url 'home' %}{% endif %}">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% if nbar == 'home' %}#{% else %}{% url 'home' %}{% endif %}">Accueil</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Realisation</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contacts</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Produits</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
                 {% comment %} <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li> {% endcomment %}
@@ -183,6 +184,7 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
   <!-- Vendor JS Files -->
   <script src=" {% static 'website/vendor/aos/aos.js' %} "></script>
   <script src=" {% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
@@ -193,10 +195,8 @@
   <script src=" {% static 'website/vendor/swiper/swiper-bundle.min.js' %} "></script>
   <script src=" {% static 'website/vendor/waypoints/noframework.waypoints.js' %} "></script>
   
-  <!-- Template Main JS File -->
-  
+  <!-- Main JS File -->
   <script src=" {% static 'website/js/main.js' %} "></script>
-  <script src="{% static 'website/js/handleCarouselViews.js' %}"></script>
 </body>
 
 </html>
