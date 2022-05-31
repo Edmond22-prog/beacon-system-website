@@ -7,10 +7,8 @@ from django.core.mail.message import BadHeaderError
 from django.utils.html import format_html
 
 
-
-class Home(TemplateView):
-    # template_name = "website/accueil.html"
-    template_name = "updated/home.html"
+class HomeView(TemplateView):
+    template_name = "website/home.html"
     
     def get(self, request, *args, **kwargs):
         context = {
@@ -19,31 +17,18 @@ class Home(TemplateView):
         return render(request, self.template_name, context)
     
 
-class Services(TemplateView):
-    # template_name = "website/developpement.html"
-    template_name = "updated/services.html"
+# class Services(TemplateView):
+#     template_name = "website/services.html"
     
-    def get(self, request, *args, **kwargs):
-        context = {
-            'nbar': 'services',
-        }
-        return render(context, self.template_name, context)
+#     def get(self, request, *args, **kwargs):
+#         context = {
+#             'nbar': 'services',
+#         }
+#         return render(context, self.template_name, context)
     
     
-class Development(TemplateView):
-    # template_name = "website/developpement.html"
-    template_name = "updated/services.html"
-    
-    def get(self, request, *args, **kwargs):
-        context = {
-            'nbar': 'services',
-        }
-        return render(context, self.template_name, context)
-
-
-class Hosting(TemplateView):
-    # template_name = "website/hebergement.html"
-    template_name = "updated/realisation.html"
+class DevelopmentView(TemplateView):
+    template_name = "website/development.html"
     
     def get(self, request, *args, **kwargs):
         context = {
@@ -52,14 +37,30 @@ class Hosting(TemplateView):
         return render(context, self.template_name, context)
 
 
-class Marketing(TemplateView):
+class HostingView(TemplateView):
+    template_name = "website/hosting.html"
+    
+    def get(self, request, *args, **kwargs):
+        context = {
+            'nbar': 'services',
+        }
+        return render(context, self.template_name, context)
+
+
+class MarketingView(TemplateView):
     template_name = "website/marketing.html"
 
+    def get(self, request, *args, **kwargs):
+        context = {
+            'nbar': 'services',
+        }
+        return render(context, self.template_name, context)
 
-class Contact(View):
+
+class ContactView(View):
     form_class = ContactForm
     initial = {'key': 'value'}
-    template_name = 'updated/contact.html'
+    template_name = 'website/contact.html'
 
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)
@@ -120,3 +121,13 @@ class Contact(View):
             'form': form
         }
         return render(request, self.template_name, context)
+
+
+class ProductView(TemplateView):
+    template_name = "website/product.html"
+    
+    def get(self, request, *args, **kwargs):
+        context = {
+            'nbar': 'product',
+        }
+        return render(context, self.template_name, context)

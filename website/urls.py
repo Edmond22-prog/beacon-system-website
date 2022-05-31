@@ -1,12 +1,12 @@
 from django.urls import path
+from .views import ContactView, DevelopmentView, HomeView, HostingView, MarketingView
 
-from .views import Home, Contact, Development, Hosting, Marketing, Services
 
 urlpatterns = [
-    path('', Home.as_view(), name='home'),
-    path('contact/', Contact.as_view(), name='contact'),
-    path('services/', Services.as_view(), name='services'),
-    path('services/developpement/', Development.as_view(), name='realisation'),
-    path('services/hebergement/', Hosting.as_view(), name='hosting'),
-    path('marketing/', Marketing.as_view(), name='marketing'),
+    path('', HomeView.as_view(), name='home'),
+    path('contact/', ContactView.as_view(), name='contact'),
+    path('developpement/', DevelopmentView.as_view(), name='development'),
+    path('hebergements/', HostingView.as_view(), name='hosting'),
+    path('marketing-digital/', MarketingView.as_view(), name='marketing'),
+    # path('product/', Product.as_view(), name='marketing'),
 ]

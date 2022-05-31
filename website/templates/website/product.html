@@ -1,0 +1,98 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+<!-- Title of the page. -->
+{% block title %}
+  Services
+{% endblock title %}
+
+<!-- Body of the page -->
+
+{% block body %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <!-- Uncomment below for hero bg with side brand image. -->
+    <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="logo" class="img-fluid displayed"> -->
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h6 class="text-capitalize">Building the future, restoring the past.</h6>
+      <h1>Your need, Our <span>Devotion</span>.</h1>
+      <h2 class="text-white text-capitalize">Providing innovative &amp; <br> sustainable solutions.</h2>
+      <div class="d-flex">
+        <a href="#" class="btn text-capitalize even">Schedule an appointment <i class="bi bi-calendar-event" style="font-size: 15pt;"></i> </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h6>The best industry and company service.</h6>
+        <h3>Our <span>Services</span>.</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-globe-alt"></i></div>
+            <h4><a href="">Développement de sites Web</a></h4>
+            <p>
+                Custom web design can be the difference between a mediocre website and an awesome one
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-globe"></i></div>
+            <h4><a href="">Développement d’application Web</a></h4>
+            <p>
+                People don’t just stumble into our office—it is through a conscious, concerted effort to find the best web developers
+                for their revolutionary web apps ideas.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-devices"></i></div>
+            <h4><a href="">Développement d’Application Mobile</a></h4>
+            <p>Have your visuals and graphics just from the perfect angle as you ever dream about them.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-pen"></i></div>
+              <h4><a href="">Conception graphique</a></h4>
+            <p>Putting together the simplicity and creativity for the outstanding of your visuals and graphics. Design is more than
+                what it looks like and feels like. Design is how it works.
+            </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-line-chart"></i></div>
+            <h4><a href="">Marketing Digital</a></h4>
+            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-data"></i></div>
+            <h4><a href="">Hébergement Web</a></h4>
+            <p>After all, your websites and apps have to hit a new high. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis recusandae facere rem voluptatum!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+{% endblock body %}
