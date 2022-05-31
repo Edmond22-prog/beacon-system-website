@@ -4,6 +4,19 @@
 @import url(../font/GoogleSansRegular.ttf);
 @import url(../font/PoppinsRegular.ttf);
 
+/* CSS variables */
+:root{
+  /* Colors */
+  --primary-color: #ff7607;
+  --primary-hover: #f8872a;
+  --secondary-color: #fff;
+  --tertiary-color: #272727;
+
+  /* Fonts */
+  --heading-font: 'poppins', sans-serif;
+  --text-font: 'GoogleSans', sans-serif;
+}
+
 body {
   font-family: "GoogleSansRegular", sans-serif;
   color: #444444;
@@ -239,6 +252,10 @@ h6 {
   background: #fff;
   color: #404040;
 }
+.navbar span{
+  font-weight: 600;
+
+}
 .navbar a,
 .navbar a:focus {
   display: flex;
@@ -455,13 +472,10 @@ h6 {
 /*--------------------------------------------------------------
 # Carousel Section
 --------------------------------------------------------------*/
-#carouselExampleCaptions button,
-#carouselPcTop button,
-#carouselTabletTop button,
-#carouselMobile button,
-#carouselMobileTop button,
-#carouselPc button{
-  border: none;
+.carousel .carousel-inner img{
+  width: 100%;
+  height: 80vh !important;
+  object-fit: cover;
 }
 .carousel .carousel-indicators [data-bs-target]{
   background-color: #ff7607 !important;
@@ -581,11 +595,13 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
+  background: url("../img/image.png");
   height: 80vh;
-  background: url("../img/image.png") top center;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
+
 #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.185);
@@ -866,239 +882,11 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Featured Services
---------------------------------------------------------------*/
-.featured-services {
-  background: #fff;
-}
-.featured-services .carousel .carousel-indicators > button{
-  width: 10px;
-  height: 10px; 
-  border-radius: 100%;
-}
-.featured-services .carousel .carousel-inner .carousel-item .main-box{
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-  position: relative;
-  top: 0;
-  margin-top: 20px;
-  transition: top ease 0.5s;
-}
-.featured-services .carousel .carousel-inner .carousel-item .main-box:hover{
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-  top: -10px;
-}
-.featured-services .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #555555;
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-  transition: all 0.3s ease-in-out;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  z-index: 1;
-  color: #fff;
-}
-.featured-services .icon-box::before {
-  content: "";
-  position: absolute;
-  background: #404040;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 100%;
-  transition: all 0.3s;
-  z-index: -1;
-  color: #404040;
-}
-.featured-services .icon-box:hover::before {
-  /* background: #fbbc04; */
-  background: #ff7607;
-  top: 0;
-  border-radius: 0px;
-}
-.featured-services .main-box img{
-  padding: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 200px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  /* border: 1px #404040 solid; */
-  border-bottom: 0;
-}
-.featured-services .icon {
-  margin-bottom: 15px;
-}
-.featured-services .icon i {
-  font-size: 48px;
-  line-height: 1;
-  color: #ff7607;
-  transition: all 0.3s ease-in-out;
-}
-.featured-services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-.featured-services .title a {
-  color: #111;
-}
-.featured-services .carousel .carousel-inner .carousel-item .description {
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 0;
-  text-align: justify;
-}
-.featured-services .icon-box:hover .title a,
-.featured-services .icon-box:hover .description {
-  color: #fff;
-  /* color: #404040; */
-}
-.featured-services .icon-box:hover .icon i {
-  /* color: #fff; */
-  color: #404040;
-}
-
-.featured-services .icon-box:hover .title a:hover {
-  /* color: #fff; */
-  /* color: #404040; */
-  text-decoration: underline #404040 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-.featured-services .icon-box .btn-register {
-  display: block;
-  align-content: center;
-  margin-top: 10%;
-  color: #404040;
-  font-weight: 700;
-  background: #ff7607;
-  transition: all 0.3s ease-in-out;
-}
-
-.featured-services .icon-box:hover .btn-register {
-  display: block;
-  align-content: center;
-  margin-top: 10%;
-  color: #ff7607;
-  font-weight: 700;
-  background: #404044;
-}
-
-.featured-services .icon-box:hover .btn-register:hover {
-  color: #ff7607;
-  background: #626264;
-  transition: all 0.3s ease-in-out;
-}
-.featured-services .desktop-service{
-  margin-left: 5%;
-}
-.featured-services .image-box-outline{
-  border: 10px #ff7607 solid;
-  background: #fff;
-  padding: 30px;
-  width: 40vw;
-  height: 55vh;
-  display: block;
-}
-.featured-services .image-box-outline img{
-  width: 90%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: -3px 5px 25px #555555;
-}
-.featured-services .text-box-bg{
-  background: #ff7607;
-  text-align: left;
-  padding: 20px;
-  width: 40%;
-  height: fit-content;
-  position: relative;
-  top: 65px;
-  left: -70px;
-}
-.featured-services .text-box-bg h4{
-  font-weight: 700;
-}
-.featured-services .text-box-bg p{
-  text-align: justify;
-}
-.featured-services .text-box-bg a{
-  border: 3px #404040 solid;
-  border-radius: 0;
-  font-weight: 600;
-  transition: all 0.3s ease-in;
-}
-.featured-services .text-box-bg a:hover{
-  color: #fff;
-  background: #404040;
-}
-.featured-services .image-box-bg{
-  /* border: 10px #ff7607 solid; */
-  background: #ff7607;
-  padding: 30px;
-  width: 40vw;
-  height: 55vh;
-}
-.featured-services .image-box-bg img{
-  width: 90%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: -3px 5px 25px #555555;
-  float: right;
-}
-.featured-services .text-box-outline{
-  border: 10px #ff7607 solid;
-  background: #fff;
-  text-align: left;
-  padding: 20px;
-  width: 40%;
-  height: fit-content;
-  position: relative;
-  top: 60px;
-  left: 70px;
-}
-.featured-services .text-box-outline h4{
-  font-weight: 700;
-}
-.featured-services .text-box-outline p{
-  text-align: justify;
-}
-.featured-services .text-box-outline a{
-  border: 3px #404040 solid;
-  border-radius: 0;
-  font-weight: 600;
-  transition: all 0.3s ease-in;
-}
-.featured-services .text-box-outline a:hover{
-  color: #fff;
-  background: #404040;
-}
-.featured-services .mobile-service{
-  display: none;
-}
-@media (width: 1024px), (width: 1440px){
-  .featured-services .image-box-outline,
-  .featured-services .image-box-bg{
-    width: 55vw;
-    height: 50vh;
-  }
-  .featured-services .text-box-bg,
-  .featured-services .text-box-outline{
-    width: 50%;
-  }
-  .featured-services .text-box-outline{
-    left: 50px;
-  }
-  .featured-services .text-box-bg{
-    left: -50px;
-  }
-}
-
-/*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .content{
+  color: #272727;
+}
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -1243,7 +1031,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #e6e6e6;
+  background: #272727;
 }
 .counts .count-box i {
   position: absolute;
@@ -1266,14 +1054,14 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  /* color: #062b5b; */
-  color: #404040;
+  color: #9c9c9c;
 }
 .counts .count-box p {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  color: #9c9c9c;
 }
 
 /*--------------------------------------------------------------
@@ -1292,6 +1080,7 @@ section {
 .clients img:hover {
   transform: scale(1.15);
 }
+
 @media (max-width: 768px) {
   .clients img {
     max-width: 40%;
@@ -1879,11 +1668,11 @@ section {
   font-size: 14px;
   margin-bottom: 0;
 }
-.contact .php-email-form {
+.contact .email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
 }
-.contact .php-email-form .error-message {
+.contact .email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1891,10 +1680,10 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.contact .php-email-form .error-message br + br {
+.contact .email-form .error-message br + br {
   margin-top: 25px;
 }
-.contact .php-email-form .sent-message {
+.contact .email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1902,13 +1691,13 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.contact .php-email-form .loading {
+.contact .email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
-.contact .php-email-form .loading:before {
+.contact .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1920,26 +1709,26 @@ section {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.contact .php-email-form .form-group {
+.contact .email-form .form-group {
   margin-bottom: 20px;
 }
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .email-form input,
+.contact .email-form textarea {
   border-radius: 5px;
   box-shadow: none;
   font-size: 14px;
 }
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .email-form input:focus,
+.contact .email-form textarea:focus {
   border-color: #ff7607;
 }
-.contact .php-email-form input {
+.contact .email-form input {
   padding: 10px 15px;
 }
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 12px 15px;
 }
-.contact .php-email-form button[type="submit"] {
+.contact .email-form button[type="submit"] {
   background: #ff7607;
   border: 0;
   padding: 10px 30px;
@@ -1947,7 +1736,7 @@ section {
   transition: 0.4s;
   border-radius: 4px;
 }
-.contact .php-email-form button[type="submit"]:hover {
+.contact .email-form button[type="submit"]:hover {
   background: #f8872a;
 }
 @-webkit-keyframes animate-loading {
@@ -2006,6 +1795,7 @@ section {
   background: #fda55d;
   text-align: center;
   font-size: 15px;
+  color: #272727;
 }
 #footer .footer-newsletter h4 {
   font-size: 24px;
