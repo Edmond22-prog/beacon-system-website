@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic import TemplateView, View
+from .models import Testimonial
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
@@ -11,8 +12,10 @@ class HomeView(TemplateView):
     template_name = "website/home.html"
     
     def get(self, request, *args, **kwargs):
+        testimonials = Testimonial.objects.all()
         context = {
             'nbar': 'home',
+            'testimonials': testimonials
         }
         return render(request, self.template_name, context)
     
