@@ -1,0 +1,66 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}
+    Développement
+{% endblock title %}
+
+{% block body %}
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h3 class="text-capitalize">Développement <span>Web</span>.</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-uppercase">Qui sommes nous ?</h4>
+                    <p class="fst-italic">
+                        <strong>BEACON SYSTEMS</strong> est une entreprise camerounaise de TIC créé en 2020. Dont la vision est l’émergence de la conscience par le moyen du Digital. <br>
+                        L’entreprise compte près d’une trentaine d’employer permanent et une quinzaine de travailleur indépendant.
+                    </p>
+                    <hr>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center more" data-aos="fade-right" data-aos-delay="100">
+                    <!-- <img src=" {% static 'website/img/about.jpg' %} " class="img-fluid" alt=""> -->
+                        <div class="d-flex">
+                        <div class="w-50 back"></div>
+                        <div class="front">
+                            <img src=" {% static 'website/img/about.jpg' %} " class="img-fluid front-img" alt="Beacon Systems Office">
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h3 class="text-capitalize">Développement <span>Mobile</span>.</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center more" data-aos="fade-right" data-aos-delay="100">
+                    <!-- <img src=" {% static 'website/img/about.jpg' %} " class="img-fluid" alt=""> -->
+                        <div class="d-flex">
+                        <div class="w-50 back"></div>
+                        <div class="front">
+                            <img src=" {% static 'website/img/about.jpg' %} " class="img-fluid front-img" alt="Beacon Systems Office">
+                        </div>
+                        </div>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-uppercase">Qui sommes nous ?</h4>
+                    <p class="fst-italic">
+                        <strong>BEACON SYSTEMS</strong> est une entreprise camerounaise de TIC créé en 2020. Dont la vision est l’émergence de la conscience par le moyen du Digital. <br>
+                        L’entreprise compte près d’une trentaine d’employer permanent et une quinzaine de travailleur indépendant.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock body %}

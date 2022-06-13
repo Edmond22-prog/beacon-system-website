@@ -78,10 +78,10 @@
       <nav id="navbar" class="navbar">
         <ul>
             <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% url 'home' %}">Accueil</a></li>
-            <li class="dropdown"><span href=""><span>Services</span> <i class="bi bi-chevron-down"></i></span>
+            <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><span href=""><span>Services</span> <i class="bi bi-chevron-down"></i></span>
               <ul>
                 <li><a href="#">Hébergement</a></li>
-                <li><a href="#">Développement</a></li>
+                <li><a href="{% url 'development' %}">Développement</a></li>
                 <li><a href="#">Marketing Digital</a></li>
               </ul>
             </li>

@@ -30,14 +30,14 @@ class HomeView(TemplateView):
 #         return render(context, self.template_name, context)
     
     
-class DevelopmentView(TemplateView):
+class DevelopmentView(View):
     template_name = "website/development.html"
     
     def get(self, request, *args, **kwargs):
         context = {
             'nbar': 'services',
         }
-        return render(context, self.template_name, context)
+        return render(request, self.template_name, context)
 
 
 class HostingView(TemplateView):
@@ -47,7 +47,7 @@ class HostingView(TemplateView):
         context = {
             'nbar': 'services',
         }
-        return render(context, self.template_name, context)
+        return render(request, self.template_name, context)
 
 
 class MarketingView(TemplateView):
@@ -57,7 +57,7 @@ class MarketingView(TemplateView):
         context = {
             'nbar': 'services',
         }
-        return render(context, self.template_name, context)
+        return render(request, self.template_name, context)
 
 
 class ContactView(View):
