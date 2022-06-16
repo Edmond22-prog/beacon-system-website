@@ -126,11 +126,11 @@ class ContactView(View):
         return render(request, self.template_name, context)
 
 
-class ProductView(TemplateView):
-    template_name = "website/product.html"
+class RealisationView(TemplateView):
+    template_name = "website/realisation.html"
     
     def get(self, request, *args, **kwargs):
         context = {
-            'nbar': 'product',
+            'nbar': 'realisation',
         }
-        return render(context, self.template_name, context)
+        return render(request, self.template_name, context)
