@@ -1,0 +1,43 @@
+.error-hero{
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    text-align: center;
+}
+.error-hero .error-icon{
+    margin: auto;
+    padding: 20px;
+    font-size: 30pt;
+    background-color: #ff660027;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.error-hero .error-icon i{
+    margin: auto;
+}
+
+.error-hero h5{
+    margin: 30px 10px;
+    font-weight: bolder;
+    color: #000;
+}
+
+
+.error-hero input{
+    margin: auto;
+    width: 15%;
+    background: #e6e6e6;
+    border: #e6e6e6;
+}
+
+.error-hero button{
+    background: none;
+    border: none;
+    font-weight: 600;
+    position: absolute;
+    top: 74%;
+    left: 55%;
+}

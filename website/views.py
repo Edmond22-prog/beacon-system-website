@@ -134,3 +134,7 @@ class RealisationView(TemplateView):
             'nbar': 'realisation',
         }
         return render(request, self.template_name, context)
+    
+
+class PageNotFoundView(TemplateView):
+    template_name = '404.html'
