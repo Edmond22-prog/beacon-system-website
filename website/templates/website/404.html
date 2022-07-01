@@ -1,0 +1,28 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% comment %} Title of the page {% endcomment %}
+{% block title %}Not found{% endblock title %}
+
+<!-- Body of the page -->
+{% block body %}
+<div class="error-hero">
+    <div class="error-icon">
+        <i class="bi bi-files"></i>
+    </div>
+    <h5>
+        404. The page you are looking <br>
+        does not exist.
+    </h5>
+    <small class="text-muted">
+        Tell us what you are looking for:
+    </small>
+    <br>
+    <div class="error-search">
+        <form action="">
+            <input type="search" name="search" id="search" placeholder="Search..." class="form-control">
+            <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+</div>
+{% endblock body %}

@@ -1776,8 +1776,8 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #4154f1;
-  border-color: #4154f1;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1855,12 +1855,12 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #012970;
+  color: var(--tertiary-color);
   font-weight: 700;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #012970;
+  color: var(--tertiary-color);
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
@@ -1875,7 +1875,7 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
-  background: #4154f1;
+  background: var(--primary-color);
   margin: 10px 2px;
   width: 36px;
   height: 36px;
@@ -1892,7 +1892,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: #5969f3;
+  background: var(--primary-hover);
 }
 
 .portfolio .portfolio-wrap:hover img {
@@ -2167,6 +2167,142 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Hosting & Princing
+--------------------------------------------------------------*/
+.host-hero{
+  height: 100vh;
+  width: 100%;
+  background: url('../img/hosting/bg-host.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 10%;
+}
+
+.host-hero h1{
+  text-align: left;
+  color: var(--secondary-color);
+  font-size: 35pt;
+}
+
+.host-hero h1 span{
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+.host-hero img{
+  transform: scale(1.5);
+}
+
+.category .cat-text h2{
+  font-weight: bold;
+}
+
+.category .cat-text h5{
+  color: var(--primary-color);
+}
+
+.category .cat-text p{
+  text-align: justify;
+}
+
+.pricing .box {
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.pricing h3 {
+  font-weight: 400;
+  margin: -20px -20px 20px -20px;
+  padding: 20px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #656262;
+  background: #f8f8f8;
+}
+.pricing h4 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+.pricing h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+.pricing h4 span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+.pricing ul {
+  padding: 0;
+  list-style: none;
+  color: #313030;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+.pricing ul li {
+  padding-bottom: 16px;
+}
+.pricing ul i {
+  color: var(--primary-color);
+  font-size: 18px;
+  padding-right: 4px;
+}
+.pricing ul .na {
+  color: #ccc;
+  text-decoration: line-through;
+}
+.pricing .btn-wrap {
+  margin: 20px -20px -20px -20px;
+  padding: 20px 15px;
+  background: #f8f8f8;
+  text-align: center;
+}
+.pricing .btn-buy {
+  background: var(--primary-color);
+  display: inline-block;
+  padding: 6px 35px 8px 35px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 3px 7px rgba(255, 88, 33, 0.4);
+  transition: 0.3s;
+}
+.pricing .btn-buy:hover {
+  background: var(--primary-hover);
+}
+.pricing .featured h3 {
+  color: #fff;
+  background: var(--primary-color);
+  box-shadow: 0 3px 7px rgba(255, 88, 33, 0.4);
+}
+.pricing .advanced {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
@@ -2369,3 +2505,4 @@ section {
     padding: 2px 0;
   }
 }
+
