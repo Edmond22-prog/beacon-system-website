@@ -84,7 +84,7 @@
           <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><span href=""><span>Services</span> <i
                 class="bi bi-chevron-down"></i></span>
             <ul>
-              <li><a href="#">Hébergement</a></li>
+              <li><a href="{% url 'hosting' %}">Hébergement</a></li>
               <li><a href="{% url 'development' %}">Développement</a></li>
               <li><a href="#">Marketing Digital</a></li>
             </ul>
@@ -131,8 +131,8 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a
                   href="{% if nbar == 'home' %}#{% else %}{% url 'home' %}{% endif %}">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Hébregement</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Dévéloppement</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'hosting' %}">Hébregement</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'development' %}">Développement</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing Digital</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contacts</a></li>
               <li><i class="bx bx-chevron-right"></i> <a
