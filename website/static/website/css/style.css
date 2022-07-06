@@ -1923,71 +1923,73 @@ section {
 
 
 /*--------------------------------------------------------------
-# Frequently Asked Questions
+# F.A.Q
 --------------------------------------------------------------*/
-.faq {
-  padding: 60px 0;
-}
-
 .faq .faq-list {
+  padding: 0 100px;
+}
+.faq .faq-list ul {
   padding: 0;
   list-style: none;
 }
-
-.faq .faq-list li {
-  border-bottom: 1px solid #d4e5fc;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+.faq .faq-list li + li {
+  margin-top: 15px;
 }
-
-.faq .faq-list .question {
+.faq .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+.faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #fbbc04;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 25px;
-  cursor: pointer;
-  color: var(--primary-color);
-  transition: 0.3s;
-}
-
-.faq .faq-list i {
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
-  position: absolute;
-  left: 0;
-  top: -2px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
 }
-
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #ffb8a1;
+}
+.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .faq .faq-list p {
   margin-bottom: 0;
-  padding: 10px 0 0 25px;
+  padding: 10px 0 0 0;
 }
-
 .faq .faq-list .icon-show {
   display: none;
 }
-
-.faq .faq-list .collapsed {
-  color: black;
+.faq .faq-list a.collapsed {
+  color: #343a40;
 }
-
-.faq .faq-list .collapsed:hover {
-  color: rgb(70, 70, 70);
-  font-weight: bold;
-  transition: all 0.2s ease-in;
+.faq .faq-list a.collapsed:hover {
+  color: var(--primary-hover);
 }
-
-.faq .faq-list .collapsed .icon-show {
+.faq .faq-list a.collapsed .icon-show {
   display: inline-block;
-  transition: 0.6s;
+}
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
 }
 
-.faq .faq-list .collapsed .icon-close {
-  display: none;
-  transition: 0.6s;
-}
 
 /*--------------------------------------------------------------
 # Contact
@@ -2356,7 +2358,7 @@ section {
 }
 
 .category .clients img{
-  transform: scale(3);.col-sm-12.col-md-6.col-lg-3
+  transform: scale(3);
 }
 
 .why-section{
