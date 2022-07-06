@@ -117,4 +117,7 @@ class RealisationView(TemplateView):
 
 
 class PageNotFoundView(TemplateView):
-    template_name = "404.html"
+    template_name = "website/404.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
