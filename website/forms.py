@@ -6,59 +6,49 @@ from .models import ContactInfo
 class ContactForm(forms.ModelForm):
     # Meta data
     class Meta:
-        model  = ContactInfo
-        fields = [
-            'name',
-            'phone',
-            'email',
-            'subject',
-            'message'
-        ]
+        model = ContactInfo
+        fields = ["name", "phone", "email", "subject", "message"]
 
         # Definition of widgets
         widgets = {
-            'name': TextInput(
+            "name": TextInput(
                 attrs={
-                    'name': 'name',
-                    'class': 'form-control',
-                    'id': 'name',
-                    'placeholder': 'Name and surname',
+                    "name": "name",
+                    "class": "form-control",
+                    "id": "name",
+                    "placeholder": "Name and surname",
                 }
             ),
-
-            'phone': NumberInput(
+            "phone": NumberInput(
                 attrs={
-                    'name': 'phone',
-                    'class': 'form-control',
-                    'id': 'phone',
-                    'placeholder': 'Phone number',
+                    "name": "phone",
+                    "class": "form-control",
+                    "id": "phone",
+                    "placeholder": "Phone number",
                 }
             ),
-
-            'email': EmailInput(
+            "email": EmailInput(
                 attrs={
-                    'name': 'email',
-                    'class': 'form-control',
-                    'id': 'email',
-                    'placeholder': 'Email address',
+                    "name": "email",
+                    "class": "form-control",
+                    "id": "email",
+                    "placeholder": "Email address",
                 }
             ),
-
-            'subject': TextInput(
+            "subject": TextInput(
                 attrs={
-                    'name': 'subject',
-                    'class': 'form-control',
-                    'id': 'subject',
-                    'placeholder': 'Message Subject...',
+                    "name": "subject",
+                    "class": "form-control",
+                    "id": "subject",
+                    "placeholder": "Message Subject...",
                 }
             ),
-
-            'message': Textarea(
+            "message": Textarea(
                 attrs={
-                    'name': 'message',
-                    'rows': '8',
-                    'class': 'form-control',
-                    'placeholder': 'Message...',
+                    "name": "message",
+                    "rows": "8",
+                    "class": "form-control",
+                    "placeholder": "Message...",
                 }
             ),
         }
