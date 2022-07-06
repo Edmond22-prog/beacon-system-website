@@ -2299,6 +2299,110 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Development
+--------------------------------------------------------------*/
+.dev-why{
+  background-color: #70707025;
+}
+
+.dev-why h4{
+  font-weight: 600;
+}
+
+.values .card {
+  border: 0;
+  padding: 160px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.values .card-body {
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  transition: ease-in-out 0.4s;
+  border-radius: 5px;
+}
+.values .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.values .card-title a {
+  color: #473d3a;
+}
+.values .card-text {
+  color: #4b4949;
+}
+.values .read-more a {
+  color: #656262;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.4s;
+}
+.values .read-more a:hover {
+  text-decoration: underline;
+}
+.values .card:hover .card-body {
+  background: var(--primary-color);
+}
+.values .card:hover .read-more a, .values .card:hover .card-title, .values .card:hover .card-title a, .values .card:hover .card-text {
+  color: var(--secondary-color);
+}
+
+.category .clients img{
+  transform: scale(3);.col-sm-12.col-md-6.col-lg-3
+}
+
+.why-section{
+  color: var(--secondary-color);
+}
+
+.why-section h3{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.why-section h5{
+  font-weight: 600;
+}
+
+.why-section h5 > span{
+  color: var(--primary-color);
+}
+
+.why-section i{
+  font-size: 20pt;
+}
+
+.why-section p{
+  text-align: justify;
+}
+
+@media (max-width: 425px) {
+  .category .clients img{
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .category .clients img{
+    transform: scale(2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .category .clients img{
+    transform: scale(3);
+  }
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
