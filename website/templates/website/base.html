@@ -90,9 +90,10 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}"
-              href="{% url 'contact' %}">Contacts</a></li>
+              href="{% url 'contact' %}">Contact</a></li>
           <li><a class="nav-link scrollto {% if nbar == 'realisation' %} active {% endif %}"
-              href="{% url 'realisation' %}">Réalisations</a></li>
+              href="{% url 'realisation' %}">Réalisations</a>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -129,15 +130,12 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Direct Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a
-                  href="{% if nbar == 'home' %}#{% else %}{% url 'home' %}{% endif %}">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'hosting' %}">Hébregement</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Accueil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'hosting' %}">Hébergement</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'development' %}">Développement</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing Digital</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contacts</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a
-                  href="{% if nbar == 'relaisation' %}#{% else %}{% url 'realisation' %}{% endif %}">Réalisation</a>
-              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'marketing' %}">Marketing Digital</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'realisation' %}">Réalisation</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -149,7 +147,6 @@
               <li><i class="bx bx-chevron-right"></i> Développement de sites Web</li>
               <li><i class="bx bx-chevron-right"></i> Développement d’application Web</li>
               <li><i class="bx bx-chevron-right"></i> Développement d’Application Mobile</li>
-              <li><i class="bx bx-chevron-right"></i> Conception graphique</li>
               <li><i class="bx bx-chevron-right"></i> Marketing Digital</li>
               <li><i class="bx bx-chevron-right"></i> Hébergement Web</li>
             </ul>
