@@ -6,23 +6,33 @@
 
 <!-- Body of the page -->
 {% block body %}
-<div class="error-hero">
-    <div class="error-icon">
-        <i class="bi bi-files"></i>
+<div class="container">
+    <div class="row m-auto">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <img src="{% static 'website/img/404.gif' %}" alt="404 image" class="img-fluid">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 m-auto text-center">
+            <h5 class="fw-bold">
+                404. The page you are looking <br>
+                does not exist.
+            </h5>
+            <small class="text-muted">
+                Tell us what you are looking for:
+            </small>
+            <form class="mb-5" action="" method="">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." style="width: 50%;">
+                <!-- <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div> -->
+                <button type="button" class="btn btn-success fw-bold"><i class="bi bi-search"></i></button>
+            </div>
+            </form>
+        </div>
     </div>
-    <h5>
-        404. The page you are looking <br>
-        does not exist.
-    </h5>
-    <small class="text-muted">
-        Tell us what you are looking for:
-    </small>
-    <br>
-    <div class="error-search">
-        <form action="">
-            <input type="search" name="search" id="search" placeholder="Search..." class="form-control">
-            <button type="submit"><i class="bi bi-search"></i></button>
-        </form>
-    </div>
-</div>
-{% endblock body %}
+    {% endblock body %}
