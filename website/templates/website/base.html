@@ -81,14 +81,20 @@
         <ul>
           <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}"
               href="{% url 'home' %}">Accueil</a></li>
-          <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><span href=""><span>Services</span> <i
-                class="bi bi-chevron-down"></i></span>
-            <ul>
-              <li><a href="{% url 'hosting' %}">Hébergement</a></li>
-              <li><a href="{% url 'development' %}">Développement</a></li>
-              <li><a href="{% url 'marketing' %}">Marketing Digital</a></li>
+          
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle {% if nbar == 'services' %} active {% endif %}" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'hosting' %}">Hébergement</a></li>
+              <li><a class="dropdown-item" href="{% url 'development' %}">Développement</a></li>
+              <li><a class="dropdown-item" href="{% url 'marketing' %}">Marketing Digital</a></li>
             </ul>
           </li>
+          
           <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}"
               href="{% url 'contact' %}">Contact</a></li>
           <li><a class="nav-link scrollto {% if nbar == 'realisation' %} active {% endif %}"
